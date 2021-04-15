@@ -20,7 +20,7 @@ header{
 }
 
 .container-header{
-    background-color: #F5DC5E;
+    background-color: #f0dc79;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -99,7 +99,7 @@ main{
     align-items: center;
     padding: 1.2rem;
     border-radius: 50%;
-    background-color:  #F5DC5E;
+    background-color:  #f0dc79;
     border: 1px solid #7a7c6f;
     box-shadow: rgb(153 153 153) -1px 1px 6px 1px;    
 }
@@ -252,7 +252,7 @@ main{
 
 .card{
     width: 100%;
-    background-color: beige;
+    background-color: #ffffff;
     padding: 1rem;
     box-shadow: rgb(153 153 153) -1px 1px 5px 1px; 
 }
@@ -294,7 +294,7 @@ main{
 }
 
 footer{
-    background-color: rgb(226, 202, 93);
+    background-color: rgb(219, 202, 134);
     width: 100%;
     display: flex;
     justify-content: center;
@@ -391,7 +391,7 @@ button{
     width: 100vw;
     height: 100vh;
 
-    background-color: #F5DC5E;
+    background-color: #f0dc79;
 
     display: flex;
     align-items: center;
