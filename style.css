@@ -41,6 +41,57 @@ header{
     padding: 1.5rem 0;
 }
 
+.menu-section .menu ul li{
+    list-style: none;
+    margin: 0;
+}
+
+.menu-section .menu a{
+    text-decoration: none;
+    color: var(--color-font-primary);
+    font-weight: 700;
+    font-size:1.5rem ;
+    line-height: 4rem;
+    text-transform: uppercase;
+    position: relative;
+    margin-left: 20px;
+}
+
+.menu-section .menu a::after{
+    position: absolute;
+    top:20px;
+    left: 0;
+    content:"";
+    padding: 1px;
+    width: 100%;
+    background-color: var(--color-font-primary);
+    transition: all 0.1s ease 0s;  
+    visibility: hidden; 
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+}
+
+.menu{
+    display: none;
+}
+
+.menu-toggle{
+    width: 40px;
+    height: 30px;
+}
+
+
+
+.one, .two, .three{
+    background-color: #8B8F6F;
+    height: 5px;
+    width: 100%;
+    margin: 6px auto;
+    transition-duration: 0.3s;
+}
+
 header img{
     width: 50px;
     height: 50px;
@@ -322,7 +373,6 @@ footer .social-media-img{
 
 }
 
-
 .contact-description .social-media{
     margin-top: 2rem;
 }
@@ -376,103 +426,60 @@ button{
     font-weight: 700;
 }
 
-.menu-section .menu{
-    display: none;
+
+
+
+
+@media(max-width: 699px){
+
+    /* -------fullscreen--------- */
+
+    .menu-section.on{
+        position: absolute;
+        top:0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+    
+        background-color: var(--color-header);
+    
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    
+        z-index: 10;
+    } 
+    
+    .menu-section.on nav{
+        display: block;
+    }
+    
+    .menu-section.on .menu-toggle{
+        position: absolute;
+        right: 30px;
+        top: 30px;
+    }
+    
+    .menu-section.on .menu-toggle .one{
+        transform: rotate(45deg) translate(7px, 7px);
+    }
+    
+    .menu-section.on .menu-toggle .two{
+        opacity: 0;
+    }
+    
+    .menu-section.on .menu-toggle .three{
+        transform: rotate(-45deg) translate(8px, -9px);
+    }
+    
+    .menu-section.on nav ul{
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 }
-
-.menu-toggle{
-    width: 40px;
-    height: 30px;
-}
-
-.one, .two, .three{
-    background-color: #8B8F6F;
-    height: 5px;
-    width: 100%;
-    margin: 6px auto;
-    transition-duration: 0.3s;
-}
-
-/* -------fullscreen--------- */
-
-.menu-section.on{
-    position: absolute;
-    top:0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-
-    background-color: var(--color-header);
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    z-index: 10;
-}    
-
-.menu-section.on nav{
-    display: block;
-}
-
-.menu-section.on .menu-toggle{
-    position: absolute;
-    right: 30px;
-    top: 30px;
-}
-
-.menu-section.on .menu-toggle .one{
-    transform: rotate(45deg) translate(7px, 7px);
-}
-
-.menu-section.on .menu-toggle .two{
-    opacity: 0;
-}
-
-.menu-section.on .menu-toggle .three{
-    transform: rotate(-45deg) translate(8px, -9px);
-}
-
-.menu-section.on nav ul{
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.menu-section .menu ul li{
-    list-style: none;
-    margin: 0;
-}
-
-.menu-section .menu a{
-    text-decoration: none;
-    color: var(--color-font-primary);
-    font-weight: 700;
-    font-size:1.5rem ;
-    line-height: 4rem;
-    text-transform: uppercase;
-    position: relative;
-    margin-left: 20px;
-}
-
-.menu-section .menu a::after{
-    position: absolute;
-    top:20px;
-    left: 0;
-    content:"";
-    padding: 1px;
-    width: 100%;
-    background-color: var(--color-font-primary);
-    transition: all 0.1s ease 0s;  
-    visibility: hidden; 
-    -webkit-transform: scaleX(0);
-    transform: scaleX(0);
-    -webkit-transition: all 0.3s ease-in-out 0s;
-    transition: all 0.3s ease-in-out 0s;
-}
-
 /* -------------------------------------------------- */
 
 @media(min-width: 700px){
@@ -491,6 +498,7 @@ button{
     .menu-section .menu-toggle{
         display: none;
     }
+
 
     .menu-section .menu{
         display: flex;

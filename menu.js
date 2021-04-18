@@ -1,9 +1,8 @@
 let show = true;
 
 const menuSection = document.querySelector(".menu-section")
-const menutoggle = menuSection.querySelector(".menu-toggle ")
 
-menutoggle.addEventListener("click",()=>{
+menuSection.addEventListener("click",()=>{
     menuSection.classList.toggle("on", show)
     show = !show
 })
