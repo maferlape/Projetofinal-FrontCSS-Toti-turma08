@@ -37,6 +37,7 @@ header{
 .box-header{
     display: flex;
     justify-content: space-between;
+    align-items: center;
     width: 80%;
     padding: 1.5rem 0;
 }
@@ -71,6 +72,12 @@ header{
     transform: scaleX(0);
     -webkit-transition: all 0.3s ease-in-out 0s;
     transition: all 0.3s ease-in-out 0s;
+}
+
+.menu-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .menu{
