@@ -13,6 +13,13 @@ const SecProjectsLink = document.getElementById('projects')
 const contactLink = document.getElementById('contactLink')
 const SecContactLink = document.getElementById('contact')
 
+const form = document.querySelector("#form-contac")
+
+const campoNome = form.querySelector('[name="nome"]')
+const campoEmail = form.querySelector('[name="email"]')
+const campoAsunto = form.querySelector('[name="asunto"]')
+const campoMensaje = form.querySelector('[name="mensaje"]')
+
 
 // Menu toggle
 
@@ -50,5 +57,56 @@ contactLink.addEventListener('click', ()=>{
     SecContactLink.style.paddingTop = "120px"
 })
 
+//Validacao do formulario
+
+form.addEventListener("submit", function (evento){
+    evento.preventDefault()
+    
+    if(campoNome.value == "" || campoAsunto.value == "" || campoEmail.value == "" || campoMensaje == ""){
+        alert("Debe preecher os campos")
+    }else if(!validarEmail(campoEmail.value)){
+        alert("Email invalido")
+    }else{
+        alert("Mensaje enviado")
+    }
+  
+})
+
+function validarEmail(email) {
+    return /^[a-zA-Z0-9._]+@[a-zA-Z0-9._]+(\.[a-zA-Z0-9._]+)+$/.test(email);
+}
 
 
+
+//Acceso da Api
+
+
+fetch(`https://api.github.com/users/maferlape/repos`)
+    .then(resp => resp.json())
+    .then(datos => {
+       for(let i=0; i<2; i++ ){
+           createlinha(datos[i],"body-table" )
+       }
+    })
+
+
+function createlinha(dato, id){
+    const body = document.querySelector(`#${id}`)
+    const linha = document.createElement('tr')
+    const nome = document.createElement('td')
+    const repositorio = document.createElement('td')
+
+    const link = document.createElement('a')
+    link.href = dato.svn_url
+    link.textContent = dato.svn_url
+
+    repositorio.appendChild(link)
+    
+    nome.textContent = dato.name
+    // repositorio.textContent = dato.svn_url
+    
+    linha.appendChild(nome)
+    linha.appendChild(repositorio)
+    
+    return body.append(linha)
+}

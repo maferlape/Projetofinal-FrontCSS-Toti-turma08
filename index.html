@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles/style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,600;0,700;0,800;0,900;1,200;1,300&display=swap" rel="stylesheet">
@@ -179,7 +179,39 @@
                 </div>
             </div>
         </section>
+
     </main>
+
+    <section class="Projetos-Github">
+
+        <div class="container-ProjetosGithub">
+
+            <h2> <img src="img/github.svg" alt=""> Repositorios do github</h2>
+
+            <div class="table">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Nome do repositorio</th>
+                            <th>link do repositorio</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="body-table">
+
+                    </tbody>
+                </table>
+            
+            </div>
+
+            <div class="ver-mais">
+                <a href="RepGithub.html" id="mais-rep">Ver +</a>
+            </div>
+        </div>
+
+    </section>
+
+   
 
     <footer id="contact">
         <div class="container-contact">
@@ -223,41 +255,43 @@
                 </div>
             </div>
 
-            
             <div class="formulario">
                 
-                <form action="">
+                <form id="form-contac">
                     <div class="datos">
-                        <label for="nome">NOME</label>
-                        <input type="text" name="nome" required>
+                        <label for="nome">NOME
+                        <input type="text" name="nome" id="nome" >
+                        </label>
                     </div>
 
                     <div class="datos">
-                        <label for="Email">E-MAIL</label>
-                        <input type="email" name="email" required>
+                        <label for="email">E-MAIL
+                        <input type="email" name="email" >
+                        </label>
                     </div>
 
                     <div class="datos">
-                        <label for="assunto">ASSUNTO</label>
-                        <input type="texto" name="asunto" required>
+                        <label for="assunto">ASSUNTO
+                        <input type="texto" name="asunto" >
+                        </label>
                     </div>
                     
                     <div class="datos">
-                        <label for="mensaje">MENSAJE</label>
-                        <textarea name="mensaje" id="" cols="30" rows="10" required></textarea>
+                        <label for="mensaje">MENSAJE
+                        <textarea name="mensaje" id="" cols="30" rows="10" ></textarea>
+                        </label>
                     </div>
                     
                     <div class="button-enviar">
-                        <button type="submit" class="">ENVIAR</button>
+                        <button type="submit">ENVIAR</button>
                     </div>
                     
                 </form>
 
             </div>
-            
         </div>
     </footer>
     
-    <script src="script.js"></script>
+    <script src="script/script.js"></script>
 </body>
 </html>

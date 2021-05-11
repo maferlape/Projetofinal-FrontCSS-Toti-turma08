@@ -9,6 +9,7 @@
     --color-font-primary:#707070;
     --color-studies:#e996e2;
     --color-footer:rgb(219, 134, 208);
+    --color-body-rep:#ebbcf7;
 }
 
 html{
@@ -222,7 +223,7 @@ main{
     width: 80%;
 }
 
-.studies h2, .experiences h2, .projects h2, footer h2{
+.studies h2, .experiences h2, .projects h2, footer h2, .container-ProjetosGithub h2{
     font-weight: 300;
     font-size: 2rem;
 }
@@ -431,7 +432,85 @@ button{
     font-weight: 700;
 }
 
+.Projetos-Github{
+    width: 100%;
+    padding: 3rem 0 3rem 0;
+    background-color: var(--color-header);
+}
 
+.container-ProjetosGithub h2 img{
+    width: 2rem;
+}
+
+
+.container-ProjetosGithub{
+    width: 80%; 
+    margin: 0 auto; 
+}
+
+.table{
+    margin: 0 auto;
+    display: block;
+    overflow-x: auto;
+    margin:1rem 0 1rem 0; 
+}
+
+.data-table{
+    width: 100%;
+    border-spacing: 0 0.3rem;
+    color:var(--color-font-primary);
+    font-size: 1rem;
+} 
+
+td{
+    background: #ffffff;
+    padding: 1rem 2rem;
+}
+
+table th{
+    background: #ffffff;
+    font-weight: 600;
+    padding: 1rem 2rem;
+
+    text-align: left;
+    color:var(--color-font-primary);
+}
+
+table thead tr th:first-child,
+table tbody tr td:first-child{
+    border-radius: 0.25rem 0 0 0.25rem;
+}
+
+table thead tr th:last-child,
+table tbody tr td:last-child{
+    border-radius: 0rem 0.25rem 0.25rem 0rem;
+}
+
+table tbody td{
+    background: #ffffff;
+    padding: 1rem 2rem;
+} 
+
+#body-table a{
+    text-decoration: none;
+    cursor: pointer;
+    color: var(--color-font-primary); 
+}
+
+#body-table a:hover, .ver-mais a:hover{
+    color: #201c1c;
+}
+
+.ver-mais a{
+    text-decoration: none;
+    color: var(--color-font-primary);
+    font-weight: 700;
+}
+
+.ver-mais{
+    display: flex;
+    justify-content: flex-end;
+}
 
 
 
@@ -593,6 +672,8 @@ button{
     }
 }
 
+
+
 @media(min-width: 800px){
     .fotografia{
         width: 25%;
@@ -602,7 +683,7 @@ button{
         width: 75%;
     }
 
-    .box-header, .about, .container-studies, .container-experiences, .container-projects, .container-contact{
+    .box-header, .about, .container-studies, .container-experiences, .container-projects,.container-ProjetosGithub, .container-contact{
         max-width: 800px;
         width: 80%;
     }
